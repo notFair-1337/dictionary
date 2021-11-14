@@ -1,7 +1,7 @@
 import React from 'react';
 import {useGetDefinitionByWordQuery} from "../../services/dictionary";
 import styles from './DictionaryResult.module.scss';
-import {v4 as uuidv4} from 'uuid';
+import { uuid } from 'uuidv4';
 import {WordPronounce, WordsList} from "./components";
 
 interface DictionaryResultProps {
@@ -29,13 +29,13 @@ const DictionaryResult: React.FC<DictionaryResultProps> = ({searchWord, setSearc
         <div className={styles.info}>
           {data[0].meanings.map((meaningItem: any) => {
             return (
-              <div key={uuidv4()} className={styles.infoItem}>
+              <div key={uuid()} className={styles.infoItem}>
                 {meaningItem.partOfSpeech && <p className={styles.title}>{meaningItem.partOfSpeech}:</p>}
                 <ul className={styles.infoList}>
                   {
                     meaningItem?.definitions.map((item: any) => {
                       return (
-                        <li key={uuidv4()}>
+                        <li key={uuid()}>
                           <p className={styles.definition}>{item.definition}</p>
                           {
                             item.example?.length > 0 && (

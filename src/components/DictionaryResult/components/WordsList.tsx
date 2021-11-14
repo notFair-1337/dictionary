@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from "../DictionaryResult.module.scss";
-import { v4 as uuidv4 } from 'uuid';
+import { uuid } from 'uuidv4';
 
 interface WordsListProps {
   setWord: (val:string)=> void;
@@ -17,7 +17,7 @@ const WordsList: React.FC<WordsListProps> = ({setWord, list, check=true,title}) 
           <ul className={styles.infoList}>
             {
               list.map((item:string)=>{
-                return <li key={uuidv4()}>
+                return <li key={uuid()}>
                   <button className={styles.definition} onClick={()=>setWord(item)}>
                     {item}
                   </button>
