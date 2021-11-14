@@ -1,0 +1,148 @@
+@import "src/assets/styles/helpers/var";
+.resultBox {
+  border-radius: 20px;
+  padding: 30px;
+  width: 1170px;
+  max-width: 100%;
+  margin: 0 auto;
+  margin-top: 30px;
+  //border: 1px solid $light_blue;
+}
+.wordTitle {
+  text-align: center;
+  font-size: 42px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: $yellow;
+
+  .pronounce {
+    font-size: 21px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    margin-top: 10px;
+    text-transform: initial;
+    font-weight: normal;
+  }
+}
+
+.info {
+  color: #fff;
+  font-size: 18px;
+  line-height: 1.3;
+
+}
+.definitionItem {
+  color: #fff;
+  font-size: 18px;
+  padding: 10px 0;
+  border-top: 1px solid $light_blue;
+  margin-top: 10px;
+
+  .value {
+    font-size: 26px;
+  }
+}
+
+.infoList {
+
+  li {
+    +li {
+      margin-top: 15px;
+      padding-top: 15px;
+      border-top: 1px solid $light_blue;
+    }
+
+
+    > ul {
+      display: flex;
+      flex-wrap: wrap;
+      font-size: 14px;
+      > * {
+
+        .definition {
+          &::before{
+            top: 7px;
+          }
+        }
+
+        + * {
+          margin-top: 5px;
+          padding-top: 0;
+          border: none;
+
+        }
+        width: 20%;
+        padding-bottom: 5px;
+      }
+    }
+
+  }
+
+  .definition {
+    position: relative;
+    padding-left: 10px;
+
+    &::before {
+      content: '';
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      left: 0;
+      top: 9px;
+      background: $yellow;
+      position: absolute;
+    }
+  }
+  button.definition {
+    cursor: pointer;
+    border: none;
+    background: none;
+    color: #fff;
+    &:hover {
+      text-decoration: underline;
+      color: $yellow;
+    }
+  }
+}
+
+.infoItem {
+  + * {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid $light_blue;
+  }
+
+  &:last-child {
+    padding-bottom: 20px;
+  }
+
+  .title {
+    font-size: 18px;
+    font-weight: bold;
+    color: $yellow;
+    text-transform: capitalize;
+    margin-bottom: 10px;
+  }
+  .smallTitle {
+    font-weight: bold;
+    margin: 20px 0;
+    margin-bottom: 10px;
+  }
+  .exampleText {
+    font-style: italic;
+    font-size: 14px;
+    color: $yellow;
+  }
+}
+
+.soundBtn {
+  width: 35px;
+  height: 35px;
+  padding: 0;
+  background: url("../../assets/images/sound.svg") no-repeat center / 45px;
+  border: none;
+  cursor: pointer;
+  margin-left: 5px;
+}

@@ -1,0 +1,1 @@
+export {default as DictionaryForm} from './DictionaryForm'
