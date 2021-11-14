@@ -15,6 +15,10 @@
   text-transform: uppercase;
   color: $yellow;
 
+
+  @media screen and (max-width: 1200px) {
+    font-size: 32px;
+  }
   .pronounce {
     font-size: 21px;
     display: flex;
@@ -24,6 +28,10 @@
     margin-top: 10px;
     text-transform: initial;
     font-weight: normal;
+
+    @media screen and (max-width: 1200px) {
+      font-size: 18px;
+    }
   }
 }
 
@@ -40,8 +48,16 @@
   border-top: 1px solid $light_blue;
   margin-top: 10px;
 
+  @media screen and (max-width: 1200px) {
+    font-size: 16px;
+  }
+
   .value {
     font-size: 26px;
+
+    @media screen and (max-width: 1200px) {
+      font-size: 18px;
+    }
   }
 }
 
@@ -75,6 +91,10 @@
         }
         width: 20%;
         padding-bottom: 5px;
+
+        @media screen and (max-width: 1200px) {
+          width: 50%;
+        }
       }
     }
 
